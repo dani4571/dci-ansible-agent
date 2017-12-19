@@ -22,6 +22,6 @@
   failed_when: "'fake' not in driver_list.stdout"
 
 - name: Copy tempest input file to undercloud
-  copy:
+  template:
     src: "tempest-undercloud-config.conf"
     dest: "{{ working_dir }}/{{ tempest_deployer_input_file }}"
